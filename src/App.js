@@ -1,30 +1,30 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 
 import Header from "./Components/Header";
-
-import Home from "./Pages/Home";
-import About from "./Pages/About";
+import Routes from "./Components/Routes";
+import Footer from "./Components/Footer";
 
 function App() {
     return (
         <Router>
-
-            <Header />
-            <hr />
-
-            <main className="container">
+            <div className="App">
+                <Header />
                 
-                <Switch>
-                    <Route  component ={Home} exact path="/" ></Route>
-                    <Route component={About} path="/about"></Route>
+                <Routes/>
+                <Footer/>
 
-                </Switch>
-            </main>
+                {/* <main className="container">
+
+                    <Switch>
+                        <Route component={Home} exact path="/" ></Route>
+                        <Route component={About} path="/about"></Route>
+
+                    </Switch>
+                </main> */}
+            </div>
+
+
 
         </Router>
     );
